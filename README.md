@@ -17,7 +17,7 @@
 ## install
 
 ``` shell
-nuget add package github.com.lizongying.dotnet-gua64
+nuget add package lizongying.gua64
 ```
 
 ## sample
