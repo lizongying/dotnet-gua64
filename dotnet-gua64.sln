@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "gua64", "gua64\gua64.csproj", "{145CA12D-15E9-4E08-8504-5FE143F37CF0}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "tests", "tests\tests.csproj", "{7747CF3B-CF10-449E-A393-13678D5C6FB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "samplesApp", "samples\sampleApp\sampleApp.csproj", "{3056B00D-6B39-4E9F-A872-6938D4BE4226}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{145CA12D-15E9-4E08-8504-5FE143F37CF0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{145CA12D-15E9-4E08-8504-5FE143F37CF0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{145CA12D-15E9-4E08-8504-5FE143F37CF0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{145CA12D-15E9-4E08-8504-5FE143F37CF0}.Release|Any CPU.Build.0 = Release|Any CPU
+
+		{7747CF3B-CF10-449E-A393-13678D5C6FB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7747CF3B-CF10-449E-A393-13678D5C6FB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7747CF3B-CF10-449E-A393-13678D5C6FB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7747CF3B-CF10-449E-A393-13678D5C6FB1}.Release|Any CPU.Build.0 = Release|Any CPU
+
+		{3056B00D-6B39-4E9F-A872-6938D4BE4226}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3056B00D-6B39-4E9F-A872-6938D4BE4226}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3056B00D-6B39-4E9F-A872-6938D4BE4226}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3056B00D-6B39-4E9F-A872-6938D4BE4226}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
