@@ -5,10 +5,6 @@ on:
     tags:
       - 'v*'
 
-env:
-  REGISTRY: ghcr.io
-  IMAGE_NAME: ${{ github.repository }}
-
 jobs:
   build-release:
     runs-on: ubuntu-latest
@@ -20,14 +16,14 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - uses: nuget/setup-nuget@v2
+      - uses: actions/setup-dotnet@v4
         with:
-          nuget-api-key: ${{ secrets.NUGET_API_KEY }}
-          nuget-version: '5.x'
+          dotnet-version: '8.0.x'
 
       - name: Push generated package to GitHub registry and NuGet
         run: |
           cd gua64
-          nuget pack
-          nuget push .\bin\Release\*.nupkg -Source github -SkipDuplicate
-          nuget push .\bin\Release\*.nupkg -Source https://api.nuget.org/v3/index.json -SkipDuplicate -ApiKey ${{ secrets.NUGET_API_KEY }}
+          dotnet build
+          dotnet pack
+          dotnet nuget push .\bin\Release\*.nupkg -s github -SkipDuplicate
+          dotnet nuget push .\bin\Release\*.nupkg -s https://api.nuget.org/v3/index.json -SkipDuplicate -k ${{ secrets.NUGET_API_KEY }}
