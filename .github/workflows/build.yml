@@ -23,7 +23,6 @@ jobs:
       - name: Push generated package to GitHub registry and NuGet
         run: |
           cd gua64
-          dotnet build
-          dotnet pack
+          dotnet pack -c Release
           dotnet nuget push .\bin\Release\*.nupkg -s github -SkipDuplicate
           dotnet nuget push .\bin\Release\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} -SkipDuplicate
