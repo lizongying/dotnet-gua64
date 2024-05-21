@@ -26,4 +26,4 @@ jobs:
           dotnet build
           dotnet pack
           dotnet nuget push .\bin\Release\*.nupkg -s github -SkipDuplicate
-          dotnet nuget push .\bin\Release\*.nupkg -s https://api.nuget.org/v3/index.json -SkipDuplicate -k ${{ secrets.NUGET_API_KEY }}
+          dotnet nuget push .\bin\Release\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} -SkipDuplicate
