@@ -25,4 +25,4 @@ jobs:
           cd gua64
           dotnet build -c Release
           dotnet pack -c Release
-          dotnet nuget push .\bin\Release\*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate  
+          dotnet nuget push ./bin/Release/*.nupkg -s https://api.nuget.org/v3/index.json -k ${{ secrets.NUGET_API_KEY }} --skip-duplicate  
